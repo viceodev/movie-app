@@ -1,0 +1,339 @@
+@import './config';
+
+.bg-primary{
+    @include setColorDueToBackground($primary-color);
+}
+
+.text-primary{
+    color: $primary-color;
+}
+
+.text-danger{
+    color: rgb(231, 131, 131);
+}
+
+.bg-secondary{
+    @include setColorDueToBackground($secondary-color);
+}
+
+.bg-primary{
+    color: $secondary-color;
+}
+
+.bg-light{
+    @include setColorDueToBackground($light-color);
+}
+
+.bg-white{
+    @include setColorDueToBackground(white);
+}
+
+.bg-dark{
+    @include setColorDueToBackground($secondary-color);
+}
+
+
+
+hr{
+    color: $light-color;
+}
+
+p{
+    font-size: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: $primary-color!important;
+}
+
+li,input, textarea{
+    outline: none;
+}
+
+input, textarea, select{
+    transition: $fade;
+    
+    &:hover{
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5)!important ;
+    }
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.container-full{
+    width: 100%;
+}
+
+img{
+    width: 100%;
+}
+
+ul{
+    list-style: none!important;
+}
+
+//margin and padding functionality 
+$listNum: (0,1,2,3,4,5);
+@each $num in $listNum{
+    .p-#{$num}{
+        padding: #{$num}rem;
+    }
+
+    .pl-#{$num}{
+        padding-left: #{$num}rem;
+    }
+
+    .pr-#{$num}{
+        padding-right: #{$num}rem;
+    }
+
+    .pt-#{$num}{
+        padding-top: #{$num}rem;
+    }
+
+    .pb-#{$num}{
+        padding-bottom: #{$num}rem;
+    }
+
+    .m-#{$num}{
+        margin: #{$num}rem;
+    }
+
+    .ml-#{$num}{
+        margin-left: #{$num}rem;
+    }
+
+    .mr-#{$num}{
+        margin-right: #{$num}rem;
+    }
+
+    .mt-#{$num}{
+        margin-top: #{$num}rem;
+    }
+
+    .mb-#{$num}{
+        margin-bottom: #{$num}rem!important;
+    }
+
+    .px-#{$num}{
+        padding: #{$num}rem 0;
+    }
+
+    .py-#{$num}{
+        padding: 0 #{$num}rem ;
+    }
+
+    .mx-#{$num}{
+        margin: #{$num}rem 0;
+    }
+    .my-#{$num}{
+        padding:0 #{$num}rem ;
+    }
+}
+
+
+
+.m-auto{
+    margin: auto!important;
+}
+
+.dont-break{
+    overflow-wrap:break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+
+}
+
+.p-auto{
+    padding: auto;
+}
+
+.m-body{
+    margin-top: 50px;
+}
+
+
+
+
+.align-items-center{
+    align-items: center;
+}
+
+.align-items-end{
+    align-items: flex-end;
+}
+
+.align-items-start{
+    align-items: flex-start;
+}
+
+.rounded{
+    border-radius: 10px;
+}
+
+.d-none{
+    display: none!important;
+}
+
+
+.capitalize{
+    text-transform: capitalize;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.center{
+    text-align: center;
+}
+
+.text-justify{
+    text-align: justify;
+}
+
+
+
+
+.fade{
+    transition: .5s all;
+}
+
+
+
+.bold{
+    font-weight: bold;
+}
+
+
+
+.hr{
+    height: 1px;
+    background-color: $light-color;
+    width: 100%;
+    opacity: .4;
+    margin: 5px auto;
+}
+
+.opacity{
+    opacity: 0!important;
+    pointer-events: none;
+}
+
+.animate-left{
+    animation: 1s leftAnim forwards;
+    position: relative;
+
+    @keyframes leftAnim{
+        from{
+            opacity: 0;
+            left: -200px;
+        }to{
+            opacity: 1;
+            left: 0px;
+        }
+    }
+}
+
+.animate-right{
+    animation: 1s rightAnim forwards;
+    position: relative;
+
+    @keyframes rightAnim{
+        from{
+            opacity: 0;
+            right: -200px;
+        }to{
+            opacity: 1;
+            right: 0px;
+        }
+    }
+}
+
+.animate-top{
+    animation: 1s topAnim forwards;
+    position: relative;
+
+    @keyframes topAnim{
+        from{
+            opacity: 0;
+            top: -200px;
+        }to{
+            opacity: 1;
+            top: 0px;
+        }
+    }
+}
+
+.animate-top-menu{
+    animation: 1s topAnimMenu forwards;
+    position: relative;
+
+    @keyframes topAnimMenu{
+        from{
+            opacity: 0;
+            top: -200px;
+        }to{
+            opacity: 1;
+            top: 56px;
+        }
+    }
+}
+
+.animate-bottom{
+    animation: 1s bottomAnim forwards;
+    position: relative;
+
+    @keyframes bottomAnim{
+        from{
+            opacity: 0;
+            bottom: -200px;
+        }to{
+            opacity: 1;
+            bottom: 0px;
+        }
+    }
+}
+
+.animate-opacity{
+    animation: 1s opacAnim forwards;
+    position: relative;
+
+    @keyframes opacAnim{
+        from{
+            opacity: 0;
+            top: -30px;
+        }to{
+            opacity: 1;
+            top: 0;
+        }
+    }
+}
+
+div.page404{
+    width: 40%;
+    margin: 30px auto;
+
+    a{
+        outline: none;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        background: $light-color;
+        color: $secondary-color!important;
+        font-weight: bold;
+        transition: .5s all;
+
+        &:hover{
+            @include setColorDueToBackground($secondary-color);
+        }
+    }
+}

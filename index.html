@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viceo getting started again</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="d-none" id="loader">
+        <div class="container">VICEO <span style="color: red;">&hearts;</span></div>
+    </div>
+
+    <header class="desktop">
+        <nav class="container">
+            <div class="logo">
+                <span class="main">Viceo</span>
+                <span class="sub">
+                    <span>Movie</span>
+                    <span>Store</span>
+                </span>
+            </div>
+            
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/about">About Me</a></li>
+                <li><a href="/contact">Contact Me</a></li>
+            </ul>
+
+            <div class="icons">
+                <div class=""reload><i class="fas fa-sync-alt" title="Reload" id="reload"></i></div>
+
+                <div class="search" id="search"><i class="fas fa-search" title="Search"></i></div>
+            </div>
+        </nav>
+    </header>
+
+    <header class="mobile">
+        <nav class="container">
+            <div class="logo">
+                <span class="main">Viceo</span>
+                <span class="sub">
+                    <span>Movie</span>
+                    <span>Store</span>
+                </span>
+            </div>
+
+            <div class="icons">
+                <div class="reload"><i class="fas fa-sync-alt" title="Reload" id="reload"></i></div>
+                <div class="menu-toggle" id="menu-toggle"><i class="fas fa-bars"></i></div>
+            </div>
+            
+
+            <div class="menu d-none" id="menu">
+                <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/about">About Me</a></li>
+                    <li><a href="/contact">Contact Me</a></li>
+
+                    <div class="search" id="search"><i class="fas fa-search"></i></div>
+                </ul>                
+            </div>
+        </nav>
+    </header>
+
+    <div class="search_form d-none" id="search_form">
+        <div class="container" id="searchContainer">
+            <p class="title">Search Here:</p>
+            
+            <form action="/">
+                <input type="text" name="s" id="search_input" placeholder="Type Here...">
+                <button id="search_button">Search</button>
+            </form>
+            <p class="mt-1 text-danger" id="error"></p>
+            <div class="close"><i class="fas fa-times" id="close" data-target="search_form"></i></div>
+
+            <ul id="search-movie-list"></ul>
+        </div>
+    </div>
+
+    <div class="modal d-none pt-3" id="modal23">
+        <div class="container p-1 pb-3">
+            <div class="close"><i class="fas fa-times" id="close" data-target="modal23"></i></div>
+
+            <div class="title">Movie Info</div>
+
+            <div class="nav" id="modalNav">
+                <div class="nav-links active" data-target="profile">Directory Creator</div>
+
+                <div class="nav-links" data-target="movie">Movie</div>
+            </div>
+
+            <div class="tab p-1">
+                <div class="profile p-1" id="profile"></div>
+
+                <div class="movie-info p-2 d-none" id="movie">
+                    <img src="./img/empty.svg" alt="" class="mt-1 mb-1" style="width: 100%;">
+                    <p class="title center">Opps! There is no data.</p>
+                </div>                
+            </div>
+
+        </div>
+    </div>
+
+    <div id="app"></div>
+
+    <section class="movie-block fade">
+        <ul id="movie-list"></ul>
+    </section>            
+</body>
+<script src="./js/main.js" type="module" id="script"></script>
+<script src="./js/index.js" type="module" id="script"></script>
+</html>

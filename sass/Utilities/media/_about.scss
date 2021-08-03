@@ -1,0 +1,63 @@
+@import '../config';
+
+
+@media screen and (max-width: 768px){
+
+    main{
+        
+        div.container{
+            flex-direction: column;
+        }
+
+        div.profile{
+            order: 2;
+            
+            h3{
+                font-size: 3rem;
+                margin: 10px 0px ;
+                text-align: center;
+            }
+
+            p{
+                width: 100%;
+                text-align: justify;
+            }
+
+            div.logos{
+                text-align: center;
+                margin: 20px auto;
+
+                i{
+                    font-size: 35px;
+                    margin: 15px 0px;
+                }
+            }
+        }
+        
+
+        div.image{
+            order: 1;
+
+            div.color-container{
+                width: 350px;
+                height: 350px;
+            }
+
+            div.image-container{
+                top: -30px;
+                left: -30px;
+                background: $secondary-color;
+            }
+
+            div.image-on{
+                position: absolute!important;
+                width: 330px!important;
+                height: 330px!important;
+                top: -30px;
+                left: -30px;
+                background-image: url('../img/viceo.jpeg');
+                background-size: contain;
+            }
+        }
+    }    
+}

@@ -1,0 +1,109 @@
+@import './Utilities/config';
+
+main{
+    padding: 30px;
+
+    h1{
+        font-size: 2.5rem;
+    }
+
+    
+    div.form-group{
+        padding: 10px;
+
+        label{
+            font-weight: bold;
+        }
+
+        input[type="text"],input[type="email"], textarea{
+            width: 100%;
+            height: 40px;
+            padding: 10px;
+            outline: none;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid $secondary-color;
+        }
+    }
+
+
+    section.container{
+        display: flex;
+        padding: 4px;
+        background: $light-color;
+        border-radius: 10px;
+        width: 70%;
+        position: relative;
+
+        div.informations{
+            padding: 20px 30px;
+            background: $secondary-color;
+            border-radius: 5px;
+
+            h3{
+                font-size: 1.3rem;
+            }
+
+            i{
+                color: $primary-color;
+            }
+        }
+
+        div.socials{
+            width: 100px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 3%;
+            left: 8%;
+
+            i:hover{
+                transition: $fade;
+                color: $light-color;
+            }
+        }
+
+        div.contact-form{
+            padding: 30px;
+            color: $secondary-color;
+
+            div.personal-info{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+
+
+            div.types{
+                padding: 10px;
+                div.types-contents{
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        div.btn{
+            text-align: right;
+
+
+            button{
+                cursor: pointer;
+                outline: none;
+                border: none;
+                padding: 15px 25px;
+                border-radius: 10px;
+                background: $primary-color;
+                color: $light-color;
+                font-weight: bold;
+                transition: .5s all;
+
+                &:hover{
+                    @include setColorDueToBackground($secondary-color);
+                }
+            }
+        }
+    }
+}
+
+@import './Utilities/media/contact';

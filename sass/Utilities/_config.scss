@@ -1,0 +1,14 @@
+$primary-color: #3D9896;
+$secondary-color: #14161A;
+$light-color: #d5dadb;
+$fade: .5s all;
+
+@mixin setColorDueToBackground($color){
+    @if(lightness($color) > 70){
+        background-color: $color;
+        color: $primary-color;
+    }@else if(lightness($color) < 30){
+        background-color: $color;
+        color: $light-color;
+    }
+}

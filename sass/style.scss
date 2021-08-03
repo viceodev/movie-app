@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+@import './Utilities/config';
+@import './Utilities/header';
+@import './Utilities/utilities';
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Gowun Dodum', sans-serif;
+    font-weight: 500;
+    background-color: rgba(black, .9);
+    color: $light-color;
+    background-size: 50%;
+    background-position: right center;
+    background-blend-mode: overlay;
+    overflow-x: hidden!important;
+}
+
+
+@import './Utilities/main';
+@import './Utilities/modal';
+@import './Utilities/loader';
