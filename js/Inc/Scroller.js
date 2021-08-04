@@ -19,7 +19,7 @@ class scroll_session{
     }
 
     scroll(){
-        this.movie_block.style.marginLeft = `-${this.num}px`;
+        this.movie_block.style.transform = `translateX(-${this.num}px)`;
 
         if(this.num > this.wanted_width){
             this.num = 0;

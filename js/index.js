@@ -14,7 +14,6 @@ let getMovies = () => {
         .then(res => res.json())
         .then(data => {
             if(data.results.length > 5){
-                console.log(data) 
                 Populator.controller_initial(data);
                 Loader.kill_loader();
             }else{
