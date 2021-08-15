@@ -45,4 +45,22 @@
             }   
         }
     }
+
+    section.movie-block{
+        
+
+        ul#movie-list{
+            
+            li{
+                a{       
+                    
+                    p{
+                        text-align: center;
+                        font-weight: bold;
+                        color: $light-color;
+                    }
+                }
+            }
+        }
+    }
 }

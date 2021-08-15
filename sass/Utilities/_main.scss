@@ -43,6 +43,21 @@ div#app{
 
     section.movie-block{
         margin: 40px 20px;
+
+        ul#movie-list{
+
+            li{
+                a{         
+                    
+                    p{
+                        text-align: center;
+                        font-weight: bold;
+                        color: $light-color;
+                    }
+                }
+
+            }
+        }
     }
 
 @import './media/index';
