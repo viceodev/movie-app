@@ -80,7 +80,7 @@ let add_list_to_dom =  async function(datas){
     list.innerHTML = "";
     await datas['results'].forEach((data, index) => {
         list.innerHTML += `
-            <li data-target="${index}">
+            <li class="item" data-target="${index}">
                 <a href="#" data-target="${index}" id="single_movie">
                     <img src="${ 'https://image.tmdb.org/t/p/w500/' +data.poster_path}" alt="${data.title}" title=""${data.title} data-target="${index}">
                     <p data-target="${index}">${data.title}</p>
@@ -90,7 +90,6 @@ let add_list_to_dom =  async function(datas){
     });     
 
     hook_function_to_single_movie_links();
-    Scroller.scroll_movies(datas.results.length);
 }
 
 
@@ -98,7 +97,7 @@ let controller_initial =  async function(datas){
     response = await datas;
     initialize_dom(await datas);
     add_list_to_dom(datas);
-    Scroller.scroll_movies(await datas.results.length);
+    Utils.applyCarousel();
     ModalPopulator.fetch_authors_data(datas.created_by.id);
     ModalPopulator.clear_single_movie_data();
     Utils.modal_functionality();

@@ -56,4 +56,3 @@ getMovies();
 reloadMovies();
 
 
-

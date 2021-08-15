@@ -102,5 +102,29 @@ let modal_functionality =  function(){
 }
   
 
-
-export {star_functionality, menu_functionality, close_functionality, toggle_search_modal, modal_functionality};
+let applyCarousel =  function(){
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        margin:20,
+        autoplay:true,
+        autoplaySpeed:500,
+        nav:false,
+        mousedrag:true,
+        freedrag:true,
+        stagePadding:10,
+        rewind:true,
+        autowidth:true,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+            1000:{
+                items:5
+            }
+        }
+    })
+}
+export {star_functionality, menu_functionality, close_functionality, toggle_search_modal, modal_functionality, applyCarousel};
