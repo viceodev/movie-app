@@ -114,6 +114,7 @@ let applyCarousel =  function(){
         stagePadding:10,
         rewind:true,
         autowidth:true,
+        margin:10,
         responsive:{
             0:{
                 items:2

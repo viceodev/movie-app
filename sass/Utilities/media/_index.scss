@@ -45,33 +45,4 @@
             }   
         }
     }
-
-    section.movie-block{
-        
-
-        ul#movie-list{
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100%!important;
-
-            
-            li{
-                margin: 20px;
-
-                a{
-                    img{
-                        width: 200px;
-                    }           
-                    
-                    p{
-                        text-align: center;
-                        font-weight: bold;
-                        color: $light-color;
-                    }
-                }
-
-            }
-        }
-    }
 }
