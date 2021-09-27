@@ -24,12 +24,11 @@ let getMovies = () => {
         fetch(`https://api.themoviedb.org/3/search/movie?api_key=ef68478ca9416c1689dbf70c6819405a&language=en-US&query=${searchTerm}&page=1&include_adult=false`)
         .then(res => res.json())
         .then(data => {
-            console.log(data.results.length);
-            
             if(data.results.length > 0){
                 Search.initialize_dom(searchTerm);
                 Populator.add_list_to_dom(data); 
                 Populator.change_response_value(data); 
+                Utils.applyCarousel();
                 Utils.modal_functionality();
                 localStorage.removeItem('s'); 
             }else{
